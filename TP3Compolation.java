@@ -1,0 +1,32 @@
+package tp3.compolation;
+import java.util.Scanner;
+public class TP3Compolation {
+    public static void main(String[] args) {
+        Scanner c=new Scanner(System.in);
+        String mot=c.nextLine();
+        System.out.println("--------------------------------------------");
+         boolean k=true;
+         int i=0,nmbc=0;
+        while(k &&  i<mot.length()){
+                            if(mot.charAt(i)!='a' && mot.charAt(i)!='b' && mot.charAt(i)!='c') k=false;
+                            if(mot.charAt(i)=='c') { 
+                                                    nmbc++;   }
+                            i++;
+                                   }
+      if(k){ System.out.print(mot+" 1 ");
+          if(nmbc>0){
+                    for( i=0;i<(mot.length()/2);i++){
+                    if(mot.charAt(i)!='c')System.out.print(mot.charAt(i));
+                    }
+                    for(i=0;i<nmbc;i++)
+                    System.out.print("c");
+                    for(i=(mot.length()/2);i<mot.length();i++){
+                  if(mot.charAt(i)!='c')System.out.print(mot.charAt(i));
+                                                  }
+                     }
+          else System.out.println(mot);  
+       }           
+       else System.out.println("mot incerecte");
+        System.out.println();
+    }   
+}
