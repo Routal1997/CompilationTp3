@@ -1,4 +1,5 @@
 package tp3.compolation;
+
 import java.util.Scanner;
 public class TP3Compolation {
     public static void main(String[] args) {
